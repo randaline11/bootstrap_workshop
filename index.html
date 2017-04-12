@@ -2,27 +2,33 @@
 <html>
 <head>
   <title>CS Survival Guide</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <nav>
-    <div>
-      <div>
-        <a href="#">CS Survival Guide</a>
+  <nav class="navbar navbar-inverse">
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'> <span class = "icon-bar"></span><span class = "icon-bar"></span><span class = "icon-bar"></span> </button>
+        <a class='navbar-brand' href="#">CS Survival Guide</a>
       </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Favorite Classes</a></li>
-        <li><a href="#">Top Languages</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Login</a></li>
+      <div class='collapse navbar-collapse'>
+        <ul class='nav navbar-nav'>
+          <li class='active'><a href="#">Home</a></li>
+          <li><a href="#">Favorite Classes</a></li>
+          <li><a href="#">Top Languages</a></li>
+        </ul>
+    <div class='collapse navbar-collapse'>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
       </ul>
     </div>
+  </div>
   </nav>
 
-  <div class="page_header">
+  <div class="jumbotron">
     <div>
       <h1>Dartmouth CS Survival Guide</h1>
       <p>Welcome to the homepage of the Dartmouth CS Survival Guide – your home
@@ -30,14 +36,49 @@
         as a CS major.</p>
       </div>
     </div>
+<!-- I picked the photos from Pexels.com and did the layout myself, but the carousel code was literally
+copied and pasted from http://stackoverflow.com/questions/20639825/bootstrap-3-carousel-not-working -->
+    <div class="container_fluid">
+      <div class='row'>
+        <div class='col-md-3'>
+        </div>
+        <div class='col-md-6'>
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="https://images.pexels.com/photos/205316/pexels-photo-205316.png?w=1260&h=750&auto=compress&cs=tinysrgb" alt="Slide 1">
+              </div>
+              <div class="item">
+                  <img src="https://images.pexels.com/photos/38892/pexels-photo-38892.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="Slide 2">
+              </div>
+              <div class="item">
+                  <img src="https://images.pexels.com/photos/30389/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="Slide 3">
+              </div>
+          </div>
+          <a href="#carousel" class="left carousel-control" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a href="#carousel" class="right carousel-control" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+        </div>
+        <div class='col-md-3'>
+        </div>
+      </div>
 
-    <div class="grid_layout">
+
       <h2>Top 6 Common CS Mistakes to Avoid</h2>
-      <div>
-        <div>
+      <div class='row'>
+        <div class='col-md-6'>
           <h3>#1: Segmentation Faults (Core Dumped)</h3>
         </div>
-        <div>
+        <div class='col-md-6'>
           <p>
             As anyone who has programmed in C knows, working with a language
             that is not memory safe can be a blessing and a curse.  One
@@ -48,11 +89,11 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class='row'>
+        <div class='col-md-6'>
           <h3>#2: Procrastination</h3>
         </div>
-        <div>
+        <div class='col-md-6'>
           <p>
             The only possible thing that makes a CS lab harder is when its
             due at midnight and it’s 10pm.  Being a CS major and procrastinating
@@ -62,11 +103,11 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class='row'>
+        <div class='col-md-6'>
           <h3>#3: Not Using Git</h3>
         </div>
-        <div>
+        <div class='col-md-6'>
           <p>
             As a student, especially if no one else is working on your code,
             using Git can seem tedious and unneccessary.  Why learn this complicated
@@ -77,11 +118,11 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class='row'>
+        <div class='col-md-6'>
           <h3>#4: Getting Cooked</h3>
         </div>
-        <div>
+        <div class='col-md-6'>
           <p>
             Ever tried taking two systems level programming courses in the same
             term?  Or how about saving an entire CS50 lab until the last minute?
@@ -93,11 +134,11 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class='row'>
+        <div class='col-md-6'>
           <h3>#5: Forgetting How to Code</h3>
         </div>
-        <div>
+        <div class='col-md-6'>
           <p>
             What's that you say?  How could a programmer possibly forget how to
             code?  Well you're right, they probably couldn't.  The problem is
@@ -108,13 +149,23 @@
       </div>
     </div>
 
-    <footer>
-      <ul>
+    <footer class="navbar navbar-default">
+      <ul class= 'nav navbar-nav'>
         <li><a href="#">ORC</a></li>
         <li><a href="#">Schedule</a></li>
         <li><a href="#">Major</a></li>
         <li><a href="#">Professors</a></li>
       </ul>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+      $('.carousel').carousel({
+    interval: 2000
+  });
+});
+
+    </script>
   </body>
   </html>
